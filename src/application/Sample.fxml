@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane prefHeight="419.0" prefWidth="647.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.editController">
+   <top>
+      <MenuBar fx:id="menu_bar" prefHeight="25.0" prefWidth="709.0" BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem fx:id="menu_save" mnemonicParsing="false" onAction="#menu_save_clicked" text="Save" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <left>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="45.0" prefWidth="100.0">
+               <children>
+                  <Button fx:id="btn_lin" mnemonicParsing="false" onAction="#btn_line_clicked" prefHeight="20.0" prefWidth="15.0">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="12.0" fitWidth="17.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@pencil.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btn_rect" mnemonicParsing="false" onAction="#btn_rect_clicked" prefHeight="20.0" prefWidth="15.0">
+                     <HBox.margin>
+                        <Insets top="10.0" />
+                     </HBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="12.0" fitWidth="17.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@rentangle.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox prefHeight="45.0" prefWidth="100.0">
+               <children>
+                  <Button fx:id="btn_cro" mnemonicParsing="false" onAction="#btn_crop_clicked" prefHeight="20.0" prefWidth="15.0">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                     <graphic>
+                        <ImageView fx:id="btn_crop" fitHeight="12.0" fitWidth="17.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@clipp5.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btn_tex" mnemonicParsing="false" onAction="#btn_text_clicked" prefHeight="20.0" prefWidth="15.0">
+                     <HBox.margin>
+                        <Insets top="10.0" />
+                     </HBox.margin>
+                     <graphic>
+                        <ImageView fx:id="btn_text" fitHeight="12.0" fitWidth="17.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@texticon.png" />
+                           </image></ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox prefHeight="37.0" prefWidth="100.0">
+               <children>
+                  <Button fx:id="btn_lablin" mnemonicParsing="false" onAction="#btn_lablin_clicked" prefHeight="20.0" prefWidth="15.0">
+                     <graphic>
+                        <ImageView fitHeight="12.0" fitWidth="17.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@pencil.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <HBox.margin>
+                        <Insets left="30.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox prefHeight="37.0" prefWidth="100.0">
+               <children>
+                  <ColorPicker fx:id="color_picker" prefHeight="30.0" prefWidth="68.0">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </ColorPicker>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </left>
+   <right>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <ListView fx:id="list_uzaklık" layoutX="100.0" layoutY="-1.0" prefHeight="243.0" prefWidth="100.0" />
+            <ListView fx:id="list_names" layoutX="-2.0" prefHeight="242.0" prefWidth="103.0" />
+         </children>
+      </AnchorPane>
+   </right>
+   <center>
+      <AnchorPane fx:id="orta_anchor" prefHeight="768.0" prefWidth="1024.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fx:id="imv" fitHeight="768.0" fitWidth="1021.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../Pictures/picture.jpg" />
+               </image></ImageView>
+            <Canvas fx:id="tuval" height="765.0" width="1022.0" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
